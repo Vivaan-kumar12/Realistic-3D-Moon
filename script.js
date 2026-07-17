@@ -95,6 +95,34 @@ const moon = new THREE.Mesh(
 
 
 // Add Moon to Scene
+// ================================
+// Ambient Light
+// ================================
+
+const ambientLight = new THREE.AmbientLight(
+    0xffffff,
+    0.25
+);
+
+scene.add(ambientLight);
+
+
+// ================================
+// Sun Light
+// ================================
+
+const sunLight = new THREE.DirectionalLight(
+    0xffffff,
+    4
+);
+
+sunLight.position.set(
+    5,
+    3,
+    5
+);
+
+scene.add(sunLight);
 
 scene.add(moon);
 // Add Canvas to Body
