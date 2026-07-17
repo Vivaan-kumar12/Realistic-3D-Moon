@@ -43,3 +43,44 @@ document.body.appendChild(
 
 // Render Scene
 renderer.render(scene, camera);
+
+// ================================
+// Animation Loop
+// ================================
+
+function animate() {
+
+    requestAnimationFrame(animate);
+
+    renderer.render(scene, camera);
+
+}
+
+// Start Animation
+animate();
+
+
+// ================================
+// Responsive Screen
+// ================================
+
+window.addEventListener("resize", () => {
+
+    // Update Camera Aspect Ratio
+    camera.aspect = window.innerWidth / window.innerHeight;
+
+    // Apply Changes
+    camera.updateProjectionMatrix();
+
+    // Update Renderer Size
+    renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+
+    // Update Pixel Ratio
+    renderer.setPixelRatio(
+        Math.min(window.devicePixelRatio, 2)
+    );
+
+});
