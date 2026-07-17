@@ -41,15 +41,15 @@ renderer.setClearColor(0x000000);
 
 const textureLoader = new THREE.TextureLoader();
 
-const moonColor = textureLoader.load("textures/moon_color.jpg");
+const moonColor = textureLoader.load("moon_color.jpg");
 
-const moonNormal = textureLoader.load("textures/moon_normal.jpg");
+const moonNormal = textureLoader.load("moon_normal.jpg");
 
-const moonDisplacement = textureLoader.load("textures/moon_displacement.jpg");
+const moonDisplacement = textureLoader.load("moon_displacement.jpg");
 
-const moonRoughness = textureLoader.load("textures/moon_roughness.jpg");
+const moonRoughness = textureLoader.load("moon_roughness.jpg");
 
-
+const starsTexture = textureLoader.load("stars.jpg");
 // ================================
 // Moon Geometry
 // ================================
