@@ -35,7 +35,68 @@ renderer.setPixelRatio(
 
 // Background Color
 renderer.setClearColor(0x000000);
+// ================================
+// Texture Loader
+// ================================
 
+const textureLoader = new THREE.TextureLoader();
+
+const moonColor = textureLoader.load("textures/moon_color.jpg");
+
+const moonNormal = textureLoader.load("textures/moon_normal.jpg");
+
+const moonDisplacement = textureLoader.load("textures/moon_displacement.jpg");
+
+const moonRoughness = textureLoader.load("textures/moon_roughness.jpg");
+
+
+// ================================
+// Moon Geometry
+// ================================
+
+const moonGeometry = new THREE.SphereGeometry(
+    2,
+    256,
+    256
+);
+
+
+// ================================
+// Moon Material
+// ================================
+
+const moonMaterial = new THREE.MeshStandardMaterial({
+
+    map: moonColor,
+
+    normalMap: moonNormal,
+
+    displacementMap: moonDisplacement,
+
+    displacementScale: 0.05,
+
+    roughnessMap: moonRoughness,
+
+    roughness: 1,
+
+    metalness: 0
+
+});
+
+
+// ================================
+// Moon Mesh
+// ================================
+
+const moon = new THREE.Mesh(
+    moonGeometry,
+    moonMaterial
+);
+
+
+// Add Moon to Scene
+
+scene.add(moon);
 // Add Canvas to Body
 document.body.appendChild(
     renderer.domElement
