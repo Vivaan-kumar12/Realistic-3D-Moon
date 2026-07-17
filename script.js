@@ -43,7 +43,7 @@ const textureLoader = new THREE.TextureLoader();
 
 const moonColor = textureLoader.load("moon_color.jpg");
 
-const moonNormal = textureLoader.load("moon_normal.jpg");
+const moonNormal = textureLoader.load("moon_normal (2).jpg");
 
 const moonDisplacement = textureLoader.load("moon_displacement.jpg");
 
