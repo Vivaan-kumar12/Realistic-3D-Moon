@@ -140,7 +140,7 @@ renderer.render(scene, camera);
 function animate() {
 
     requestAnimationFrame(animate);
-
+moon.rotation.y += 0.0015;
     renderer.render(scene, camera);
 
 }
